@@ -1,0 +1,171 @@
+frontend:
+  aeolus_fe: 
+    scm:
+      scm_repo: data/dp/aeolus_fe_uspipo
+    maat:
+      maat_publish_region: PIPO-US
+      maat_name: aeolus_fe_uspipo
+      maat_token: 856213025ed7
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: online
+      maat_publish_type_gray: gray
+      # maat_parent_name is intentionally empty
+      maat_parent_name: ''
+  fe_prep: 
+    scm:
+      scm_repo: data/dp/fe_prep_uspipo
+    maat:
+      maat_publish_region: PIPO-US
+      maat_name: fe_prep_uspipo
+      maat_token: 01c3213fb4df7
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_uspipo
+  queryeditor: 
+    scm:
+      scm_repo: data/dp/aeolus_query_editor_v2_uspipo
+    maat:
+      maat_publish_region: PIPO-US
+      maat_name: aeolus-query-editor-v2-uspipo
+      maat_token: 051235be1471
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_uspipo
+backend:
+  aeolus:
+    tce:
+      tce_psm: data.aeolus.api_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: data/dp/aeolus
+  prepare:
+    tce:
+      tce_psm: data.aeolus.prepare_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: dp/aeolus/aeolus_prep
+  meta_service:
+    tce:
+      tce_psm: data.aeolus.meta_service_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: dp/aeolus/metaservice
+  vqs:
+    tce:
+      tce_psm: data.aeolus.vqs_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: data/dp/vqs
+  bdb_backend:
+    tce:
+      tce_psm: vpc.bdb.backend_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_jobserver:
+    tce:
+      tce_psm: vpc.bdb.jobserver_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_scheduler:
+    tce:
+      tce_psm: vpc.bdb.scheduler_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: dp/bigdatabase/all
+  ars:
+    tce:
+      tce_psm: data.ars.api
+      tce_psm_cluster_name: default-uspipo
+      tce_psm_cluster_name_gray: gray-uspipo
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: data/dp/aeolus_resource_service
+  aeolus_glue:
+    tce:
+      tce_psm: data.aeolus.glue_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: dp/aeolus_fe/glue
+push:
+  eventhub:
+    tce:
+      tce_psm: data.eventhub.api_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: data/dp/eventhub
+  ajs:
+    tce:
+      tce_psm: data.aeolus.job_scheduler_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    tcc:
+      tcc_cluster: uspipo
+    scm:
+      scm_repo: data/dp/aeolus_job_scheduler
+  subscription:
+    tce:
+      tce_psm: data.dp.subscription_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: data/dp/subscription
+  subscription_push_script:
+    tce:
+      tce_psm: data.dp.subscription_push_script_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: data/dp/subscription
+  notification:
+    tce:
+      tce_psm: data.dp.notification_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: data/dp/notification
+  sqlquery:
+    tce:
+      tce_psm: data.dp.sqlquery_uspipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: US-Compliance
+    scm:
+      scm_repo: data/dp/sqlquery

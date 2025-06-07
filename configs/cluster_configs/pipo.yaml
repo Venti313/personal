@@ -1,0 +1,171 @@
+frontend:
+  aeolus_fe: 
+    scm:
+      scm_repo: data/dp/aeolus_fe_pipo_doblin
+    maat:
+      maat_publish_region: EU-Compliance2
+      maat_name: aeolus_fe_pipo_doblin
+      maat_token: 85621325ed7
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: online
+      maat_publish_type_gray: gray
+      # maat_parent_name is intentionally empty
+      maat_parent_name: ''
+  fe_prep: 
+    scm:
+      scm_repo: data/dp/fe_prep_pipo_doblin
+    maat:
+      maat_publish_region: EU-Compliance2
+      maat_name: fe_prep_pipo_dublin
+      maat_token: 01123b4df7
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_pipo_doblin
+  queryeditor:
+    scm:
+      scm_repo: data/dp/aeolus_query_editor_v2_pipo_dublin
+    maat:
+      maat_publish_region: EU-Compliance2
+      maat_name: aeolus-query-editor-v2_pipo_dublin
+      maat_token: 052131471
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_pipo_doblin
+backend:
+  aeolus:
+    tce:
+      tce_psm: data.aeolus.api_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: data/dp/aeolus
+  prepare:
+    tce:
+      tce_psm: data.aeolus.prepare_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: dp/aeolus/aeolus_prep
+  meta_service:
+    tce:
+      tce_psm: data.aeolus.meta_service_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: dp/aeolus/metaservice
+  vqs:
+    tce:
+      tce_psm: data.aeolus.vqs_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: data/dp/vqs
+  bdb_backend:
+    tce:
+      tce_psm: vpc.bdb.backend_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_jobserver:
+    tce:
+      tce_psm: vpc.bdb.jobserver_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_scheduler:
+    tce:
+      tce_psm: vpc.bdb.scheduler_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: dp/bigdatabase/all
+  ars:
+    tce:
+      tce_psm: data.ars.api
+      tce_psm_cluster_name: default-pipo
+      tce_psm_cluster_name_gray: gray-pipo
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: data/dp/aeolus_resource_service
+  aeolus_glue:
+    tce:
+      tce_psm: data.aeolus.glue_pipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: dp/aeolus_fe/glue
+push:
+  eventhub:
+    tce:
+      tce_psm: data.eventhub.api_eu_ttp
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: data/dp/eventhub
+  ajs:
+    tce:
+      tce_psm: data.aeolus.job_scheduler_eu_ttp
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    tcc:
+      tcc_cluster: pipo
+    scm:
+      scm_repo: data/dp/aeolus_job_scheduler
+  subscription:
+    tce:
+      tce_psm: data.dp.subscription_eu_ttp
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: data/dp/subscription
+  subscription_push_script:
+    tce:
+      tce_psm: data.dp.subscription_push_script_eu_ttp
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: data/dp/subscription
+  notification:
+    tce:
+      tce_psm: data.dp.notification_eu_ttp
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: EU-Compliance2
+    scm:
+      scm_repo: data/dp/notification
+#  sqlquery:
+#    tce:
+#      tce_psm: data.dp.sqlquery_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: EU-Compliance2
+#    scm:
+#      scm_repo: data/dp/sqlquery

@@ -1,0 +1,194 @@
+
+frontend:
+  aeolus_fe: 
+    scm:
+      scm_repo: data/dp/aeolus_fe_idpipo
+    maat:
+      maat_publish_region: Id1a
+      maat_name: aeolus_fe_idpipo
+      maat_token: c84123f7b1
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: online
+      maat_publish_type_gray: gray
+      # maat_parent_name is intentionally empty
+      maat_parent_name: ''
+  fe_prep: 
+    scm:
+      scm_repo: data/dp/fe_prep_idpipo
+    maat:
+      maat_publish_region: Id1a
+      maat_name: fe_prep_idpipo
+      maat_token: 2133f7899
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_idpipo
+#  vscreen: 
+#    scm:
+#      scm_repo: data/dp/vscreen
+#    maat:
+#      maat_publish_region: US-EastRed
+#      maat_name: vscreen-eu-ttp
+#      maat_token: f9861e60-cd44-11ed-89ad-3d1a5be8b89e
+#      maat_gray_name: gray # name of the gray configuration in MAAT.
+#      maat_publish_type: onlineChild # prep is a child maat project.
+#      maat_publish_type_gray: grayChild
+#      maat_parent_name: aeolus-eu-ttp
+  queryeditor: 
+    scm:
+      scm_repo: data/dp/aeolus_query_editor_v2_idpipo
+    maat:
+      maat_publish_region: Id1a
+      maat_name: aeolus_query_editor_v2_idpipo
+      maat_token: e931237899
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_idpipo
+#  aeolus_h5: 
+#    scm:
+#      scm_repo: data/dp/aeolus_h5_eu_ttp
+#    maat:
+#      maat_publish_region: US-EastRed
+#      maat_name: aeolus-h5-eu-ttp
+#      maat_token: cb012367538ec
+#      maat_gray_name: gray # name of the gray configuration in MAAT.
+#      maat_publish_type: online # prep is a child maat project.
+#      maat_publish_type_gray: gray
+#      # maat_parent_name is intentionally empty
+#      maat_parent_name: ''
+backend:
+  aeolus:
+    tce:
+      tce_psm: data.aeolus.api_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    tcc:
+      tcc_cluster: idpipo
+    scm:
+      scm_repo: data/dp/aeolus
+  prepare:
+    tce:
+      tce_psm: data.aeolus.prepare_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    tcc:
+      tcc_cluster: idpipo
+    scm:
+      scm_repo: dp/aeolus/aeolus_prep
+  meta_service:
+    tce:
+      tce_psm: data.aeolus.meta_service_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    tcc:
+      tcc_cluster: idpipo
+    scm:
+      scm_repo: dp/aeolus/metaservice
+  vqs:
+    tce:
+      tce_psm: data.aeolus.vqs_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    tcc:
+      tcc_cluster: idpipo
+    scm:
+      scm_repo: data/dp/vqs
+  bdb_backend:
+    tce:
+      tce_psm: vpc.bdb.backend_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_jobserver:
+    tce:
+      tce_psm: vpc.bdb.jobserver_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_scheduler:
+    tce:
+      tce_psm: vpc.bdb.scheduler_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    scm:
+      scm_repo: dp/bigdatabase/all
+  ars:
+    tce:
+      tce_psm: data.ars.api
+      tce_psm_cluster_name: default-idpipo
+      tce_psm_cluster_name_gray: gray-idpipo
+      tce_psm_cluster_region: ID-Compliance
+    tcc:
+      tcc_cluster: idpipo
+    scm:
+      scm_repo: data/dp/aeolus_resource_service
+  aeolus_glue:
+    tce:
+      tce_psm: data.aeolus.glue_idpipo
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: ID-Compliance
+    scm:
+      scm_repo: dp/aeolus_fe/glue
+#  eventhub:
+#    tce:
+#      tce_psm: data.eventhub.api_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: ID-Compliance
+#    tcc:
+#      tcc_cluster: idpipo
+#    scm:
+#      scm_repo: data/dp/eventhub
+#  ajs:
+#    tce:
+#      tce_psm: data.aeolus.job_scheduler_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: ID-Compliance
+#    tcc:
+#      tcc_cluster: idpipo
+#    scm:
+#      scm_repo: data/dp/aeolus_job_scheduler
+#  subscription:
+#    tce:
+#      tce_psm: data.dp.subscription_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: ID-Compliance
+#    scm:
+#      scm_repo: data/dp/subscription
+#  subscription_push_script:
+#    tce:
+#      tce_psm: data.dp.subscription_push_script_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: ID-Compliance
+#    scm:
+#      scm_repo: data/dp/subscription
+#  notification:
+#    tce:
+#      tce_psm: data.dp.notification_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: ID-Compliance
+#    scm:
+#      scm_repo: data/dp/notification
+#  sqlquery:
+#    tce:
+#      tce_psm: data.dp.sqlquery_eu_ttp
+#      tce_psm_cluster_name: default
+#      tce_psm_cluster_name_gray: gray
+#      tce_psm_cluster_region: ID-Compliance
+#    scm:
+#      scm_repo: data/dp/sqlquery

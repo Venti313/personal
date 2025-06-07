@@ -1,0 +1,171 @@
+frontend:
+  aeolus_fe: 
+    scm:
+      scm_repo: data/dp/aeolus_fe_mycis
+    maat:
+      maat_publish_region: CIS
+      maat_name: aeolus_fe_mycis
+      maat_token: f2131628bf80
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: online
+      maat_publish_type_gray: gray
+      # maat_parent_name is intentionally empty
+      maat_parent_name: ''
+  fe_prep: 
+    scm:
+      scm_repo: data/dp/fe_prep_mycis
+    maat:
+      maat_publish_region: CIS
+      maat_name: fe_prep_mycis
+      maat_token: 0212137fcf
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_mycis
+  queryeditor: 
+    scm:
+      scm_repo: data/dp/aeolus_query_editor_v2_mycis
+    maat:
+      maat_publish_region: CIS
+      maat_name: aeolus-query-editor-v2-mycis
+      maat_token: fade213adfe9a
+      maat_gray_name: gray # name of the gray configuration in MAAT.
+      maat_publish_type: onlineChild # prep is a child maat project.
+      maat_publish_type_gray: grayChild
+      maat_parent_name: aeolus_fe_mycis
+backend:
+  aeolus:
+    tce:
+      tce_psm: data.aeolus.api_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: data/dp/aeolus
+  prepare:
+    tce:
+      tce_psm: data.aeolus.prepare_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: dp/aeolus/aeolus_prep
+  meta_service:
+    tce:
+      tce_psm: data.aeolus.meta_service_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: dp/aeolus/metaservice
+  vqs:
+    tce:
+      tce_psm: data.aeolus.vqs_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: data/dp/vqs
+  bdb_backend:
+    tce:
+      tce_psm: vpc.bdb.backend_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_jobserver:
+    tce:
+      tce_psm: vpc.bdb.jobserver_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: dp/bigdatabase/all
+  bdb_scheduler:
+    tce:
+      tce_psm: vpc.bdb.scheduler_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: dp/bigdatabase/all
+  ars:
+    tce:
+      tce_psm: data.ars.api
+      tce_psm_cluster_name: default-mycis
+      tce_psm_cluster_name_gray: gray-mycis
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: data/dp/aeolus_resource_service
+  aeolus_glue:
+    tce:
+      tce_psm: data.aeolus.glue_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: dp/aeolus_fe/glue
+push:
+  eventhub:
+    tce:
+      tce_psm: data.eventhub.api_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: data/dp/eventhub
+  ajs:
+    tce:
+      tce_psm: data.aeolus.job_scheduler_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    tcc:
+      tcc_cluster: mycis
+    scm:
+      scm_repo: data/dp/aeolus_job_scheduler
+  subscription:
+    tce:
+      tce_psm: data.dp.subscription_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: data/dp/subscription
+  subscription_push_script:
+    tce:
+      tce_psm: data.dp.subscription_push_script_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: data/dp/subscription
+  notification:
+    tce:
+      tce_psm: data.dp.notification_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: data/dp/notification
+  sqlquery:
+    tce:
+      tce_psm: data.dp.sqlquery_mycis
+      tce_psm_cluster_name: default
+      tce_psm_cluster_name_gray: gray
+      tce_psm_cluster_region: Asia-CIS
+    scm:
+      scm_repo: data/dp/sqlquery

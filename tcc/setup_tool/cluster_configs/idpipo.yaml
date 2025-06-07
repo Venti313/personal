@@ -1,0 +1,60 @@
+tcc_base_domain: https://tc23ed.org
+jwt_base_url: https://-i2312ce.net
+jwt_secret_key: 123
+services:
+  aeolus:
+    tcc_psm: data.aeolus.conf_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  prepare:
+    tcc_psm: data.aeolus.prepare_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  meta_service:
+    tcc_psm: data.aeolus.meta_service_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  vqs:
+    tcc_psm: data.vqs.conf_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  ajs:
+    tcc_psm: data.aeolus.job_scheduler_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  ars:
+    tcc_psm: data.ars.conf
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  eventhub:
+    tcc_psm: data.eventhub.conf_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  sqlquery:
+    tcc_psm: data.dp.query_editor_idpipo
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: ID-Compliance
+    tcc_conf_space: default
+    tcc_conf_space_gray: gray

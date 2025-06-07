@@ -1,0 +1,60 @@
+tcc_base_domain: http://tcnet
+jwt_base_url: https://clnet
+jwt_secret_key: 213
+services:
+  aeolus:
+    tcc_psm: data.aeolus.conf_eu_ttp
+    tcc_version: V2
+    tcc_token_v2: 213
+    tcc_region: I18N
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  prepare:
+    tcc_psm: data.aeolus.prepare_conf_eu_ttp
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: US-EastRed
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  meta_service:
+    tcc_psm: data.aeolus.meta_conf_eu_ttp
+    tcc_version: V2
+    tcc_token_v2: 123
+    tcc_region: I18N
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  vqs:
+    tcc_psm: data.aeolus.vqs_conf_eu_ttp
+    tcc_version: V3
+    tcc_token_v2: UNUSED
+    tcc_region: US-EastRed
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  ajs:
+    tcc_psm: data.aeolus.job_scheduler
+    tcc_version: V2
+    tcc_token_v2: 123
+    tcc_region: I18N
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  ars:
+    tcc_psm: data.ars.conf
+    tcc_version: V2
+    tcc_token_v2: 213
+    tcc_region: I18N
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  eventhub:
+    tcc_psm: data.eventhub.conf
+    tcc_version: V2
+    tcc_token_v2: 123
+    tcc_region: I18N
+    tcc_conf_space: prod
+    tcc_conf_space_gray: gray
+  sqlquery:
+    tcc_psm: data.dp.query_editor
+    tcc_version: V2
+    tcc_token_v2: UNSET
+    tcc_region: US-EastRed
+    tcc_conf_space: default
+    tcc_conf_space_gray: gray

@@ -1,0 +1,64 @@
+# Might want to consider using tag or commit.
+frontend:
+  aeolus_fe:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  fe_prep:
+    scm:
+      scm_repo_branch: release-2.70.0
+#  vscreen:
+#    scm:
+#      scm_repo_branch: release-2.56.1
+#  queryeditor:
+#    scm:
+#      scm_repo_branch: release-qe-2.59.1
+#  aeolus_h5:
+#    scm:
+#      scm_repo_branch: release-aeolus-2.56.1
+backend:
+  aeolus:
+    scm:
+      scm_repo_branch: hotfix_mycis_70_1030
+  prepare:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  meta_service:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  vqs:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  bdb_backend:
+    scm:
+      scm_repo_branch: release-1.5.0
+  bdb_jobserver:
+    scm:
+      scm_repo_branch: release-1.5.0
+  bdb_scheduler:
+    scm:
+      scm_repo_branch: release-1.5.0
+  ars:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  aeolus_glue:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+#  sqlquery:
+#    scm:
+#      scm_repo_branch: skydorm-debug
+push:
+  eventhub:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  ajs:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  subscription:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  subscription_push_script:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
+  notification:
+    scm:
+      scm_repo_branch: release-aeolus-2.70.0
